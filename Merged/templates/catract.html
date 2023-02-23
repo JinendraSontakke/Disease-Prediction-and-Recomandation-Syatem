@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading {
+            font-size: 5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        form {
+            font-size: 1.5rem;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        form div {
+            margin: 1rem 0;
+        }
+
+        form button {
+            margin: 1rem 0;
+        }
+
+        button {
+            padding: 1rem 4rem;
+            font-size: 1.2rem;
+            background-color: purple;
+            color: white;
+            border-radius: 15px;
+            transition: all 300ms ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .prediction {
+            font-size: 2rem;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .home_btn {
+            position: fixed;
+            top: 0.5rem;
+            left: 0.5rem;
+            text-align: center;
+            background-color: white;
+            text-decoration: none;
+            border: 3px solid purple;
+            border-radius: 15px;
+            color: black;
+            padding: 0.5rem;
+            transition: all 300ms ease-in-out;
+        }
+
+        .home_btn:hover {
+            background-color: lightcoral;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading"> Catract Eye Detection </div>
+    <form action="{{ url_for('catract_predict')}}" method="post">
+        <div>
+            <label for="">Input eye image:</label>
+            <input type="file" name="imgeye" id="" required>
+        </div>
+        <button type="submit"> Submit </button>
+    </form>
+    <div class="prediction">
+        {{ data }}
+    </div>
+    <a class="home_btn" href="/"> Home </a>
+</body>
+
+</html>

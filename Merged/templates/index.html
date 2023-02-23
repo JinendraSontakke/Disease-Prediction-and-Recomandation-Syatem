@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .disease_prediction {
+            font-size: 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        img {
+            width: 25rem;
+        }
+
+        .buttons {
+            margin-top: 7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+        .buttons2 {
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        a {
+            text-align: center;
+            width: 20rem;
+            text-decoration: none;
+            border: 3px solid purple;
+            border-radius: 15px;
+            color: black;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 1rem;
+            transition: all 300ms ease-in-out;
+            background-color: white;
+        }
+
+        a:hover {
+            background-color: lightcoral;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="disease_prediction">
+        <div class="main"> Disease Prediction </div>
+        <img src="..\static\228-2282825_animated-picture-of-doctor-hd-png-download-removebg-preview.png" alt="">
+    </div>
+    <div class="buttons">
+        <a href="heart"> Heart Disease Prediction </a>
+        <a href="daibetes"> Daibetes Prediction </a>
+        <a href="catract"> Catract Eye Detection </a>
+        
+    </div>
+    <div class="buttons2">
+        <a href="diet"> diet Plan Recommendation</a>
+        <!--<a href="kidney"> kidney Disease Prediction </a>-->
+    </div>
+</body>
+
+</html>
